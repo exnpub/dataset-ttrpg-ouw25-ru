@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "issues": [
+    {
+      "document_id": "ouw25-4-2-1-4-shablon-protokola-nulevoy-vstrechi",
+      "category": "template_fields",
+      "severity": "review",
+      "status": "closed",
+      "message": "Пустые строки бланка свёрнуты в маркеры «Поле для заполнения»; сверить форму с DOCX."
+    },
+    {
+      "document_id": "ouw25-4-6-1-tsennye-podarki",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-6-2-prokhodnye-obyvateli",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-6-3-zakaznye-gruzoperevozki",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-6-4-passazhirskie-perevozki-passazhiry-konstruktor",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-5-11-o-proizvodnykh-materialakh",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-5-12-vneshnie-ssylki",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-5-13-collision-engine-srd",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-5-2-kalendar-blagoslovennogo-priliva-blank",
+      "category": "image_description",
+      "severity": "review",
+      "status": "closed",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    }
+  ]
+}

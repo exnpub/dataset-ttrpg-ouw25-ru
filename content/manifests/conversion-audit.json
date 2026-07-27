@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27",
+  "scope": "structural comparison; not a semantic or visual approval",
+  "summary": {
+    "documents": 39,
+    "documents_needing_review": 0,
+    "high_severity_flags": 0
+  },
+  "documents": [
+    {
+      "document_id": "ouw25-0-vvodnaya-chast",
+      "source_path": "docx_sources/0. Вводная часть.docx",
+      "markdown_path": "content/markdown/0-vvodnaya-chast.md",
+      "source": {
+        "media": 4,
+        "tables": 0,
+        "headings": 18,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 4,
+        "tables": 0,
+        "headings": 19,
+        "external_links": 2,
+        "draft_links": 0,
+        "characters": 18889
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-1-kratkie-razyasneniya",
+      "source_path": "docx_sources/1. Краткие разъяснения.docx",
+      "markdown_path": "content/markdown/1-kratkie-razyasneniya.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 20,
+        "hyperlinks": 11
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 21,
+        "external_links": 16,
+        "draft_links": 0,
+        "characters": 22081
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-1-minimalnyy-kontekst",
+      "source_path": "docx_sources/2.1. Минимальный контекст.docx",
+      "markdown_path": "content/markdown/2-1-minimalnyy-kontekst.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 9,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 9,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 14159
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-2-vash-geroy-ekipazh-i-sudno",
+      "source_path": "docx_sources/2.2. Ваш герой, экипаж и судно.docx",
+      "markdown_path": "content/markdown/2-2-vash-geroy-ekipazh-i-sudno.md",
+      "source": {
+        "media": 2,
+        "tables": 2,
+        "headings": 111,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 2,
+        "headings": 111,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 89297
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-3-spornye-sluchai",
+      "source_path": "docx_sources/2.3. Спорные случаи.docx",
+      "markdown_path": "content/markdown/2-3-spornye-sluchai.md",
+      "source": {
+        "media": 5,
+        "tables": 0,
+        "headings": 46,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 5,
+        "tables": 0,
+        "headings": 47,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 63348
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-3-1-dramaticheskiy-razmen",
+      "source_path": "docx_sources/2.3.1 Драматический размен.docx",
+      "markdown_path": "content/markdown/2-3-1-dramaticheskiy-razmen.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 13,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 14,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 18007
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-4-po-moryam-po-volnam",
+      "source_path": "docx_sources/2.4. По морям, по волнам.docx",
+      "markdown_path": "content/markdown/2-4-po-moryam-po-volnam.md",
+      "source": {
+        "media": 2,
+        "tables": 4,
+        "headings": 31,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 4,
+        "headings": 32,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 21218
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-5-portovaya-sueta",
+      "source_path": "docx_sources/2.5. Портовая суета.docx",
+      "markdown_path": "content/markdown/2-5-portovaya-sueta.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 35,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 36,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 27052
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-2-6-prikladnaya-ekonomika",
+      "source_path": "docx_sources/2.6. Прикладная экономика.docx",
+      "markdown_path": "content/markdown/2-6-prikladnaya-ekonomika.md",
+      "source": {
+        "media": 4,
+        "tables": 2,
+        "headings": 73,
+        "hyperlinks": 23
+      },
+      "markdown": {
+        "images": 4,
+        "tables": 2,
+        "headings": 68,
+        "external_links": 23,
+        "draft_links": 0,
+        "characters": 67757
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-1-narody-morya",
+      "source_path": "docx_sources/3.1. Народы моря.docx",
+      "markdown_path": "content/markdown/3-1-narody-morya.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 40,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 41,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 44608
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-2-globalnaya-geografiya",
+      "source_path": "docx_sources/3.2. Глобальная география.docx",
+      "markdown_path": "content/markdown/3-2-globalnaya-geografiya.md",
+      "source": {
+        "media": 4,
+        "tables": 0,
+        "headings": 10,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 4,
+        "tables": 0,
+        "headings": 11,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 11941
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-3-vliyatelnye-koalitsii",
+      "source_path": "docx_sources/3.3. Влиятельные коалиции.docx",
+      "markdown_path": "content/markdown/3-3-vliyatelnye-koalitsii.md",
+      "source": {
+        "media": 3,
+        "tables": 0,
+        "headings": 76,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 3,
+        "tables": 0,
+        "headings": 76,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 57316
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-4-personalii-i-kharakternye-tipy",
+      "source_path": "docx_sources/3.4. Персоналии и характерные типы.docx",
+      "markdown_path": "content/markdown/3-4-personalii-i-kharakternye-tipy.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 148,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 149,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 150008
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-5-istoricheskaya-perspektiva",
+      "source_path": "docx_sources/3.5. Историческая перспектива.docx",
+      "markdown_path": "content/markdown/3-5-istoricheskaya-perspektiva.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 64,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 65,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 30012
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-6-klyuchevye-porty",
+      "source_path": "docx_sources/3.6. Ключевые порты.docx",
+      "markdown_path": "content/markdown/3-6-klyuchevye-porty.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 70,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 71,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 47039
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-3-7-putevye-peripetii",
+      "source_path": "docx_sources/3.7. Путевые перипетии.docx",
+      "markdown_path": "content/markdown/3-7-putevye-peripetii.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 12,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 13,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 18017
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-0-vstupitelnaya-chast",
+      "source_path": "docx_sources/4.0. Вступительная часть.docx",
+      "markdown_path": "content/markdown/4-0-vstupitelnaya-chast.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 4,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 5,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 8144
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-1-pro-ideologiyu-dizayna",
+      "source_path": "docx_sources/4.1. Про идеологию дизайна.docx",
+      "markdown_path": "content/markdown/4-1-pro-ideologiyu-dizayna.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 31,
+        "hyperlinks": 1
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 32,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 43742
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-2-v-nachale-kampanii",
+      "source_path": "docx_sources/4.2. В начале кампании.docx",
+      "markdown_path": "content/markdown/4-2-v-nachale-kampanii.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 49,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 50,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 38821
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-2-1-4-shablon-protokola-nulevoy-vstrechi",
+      "source_path": "docx_sources/4.2.1.4 Шаблон протокола нулевой встречи.docx",
+      "markdown_path": "content/markdown/4-2-1-4-shablon-protokola-nulevoy-vstrechi.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 24,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 23,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 18811
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-3-struktury-i-tsikly",
+      "source_path": "docx_sources/4.3. Структуры и циклы.docx",
+      "markdown_path": "content/markdown/4-3-struktury-i-tsikly.md",
+      "source": {
+        "media": 6,
+        "tables": 1,
+        "headings": 47,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 6,
+        "tables": 1,
+        "headings": 48,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 34483
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-4-prostranstva-puteshestviy",
+      "source_path": "docx_sources/4.4. Пространства путешествий.docx",
+      "markdown_path": "content/markdown/4-4-prostranstva-puteshestviy.md",
+      "source": {
+        "media": 13,
+        "tables": 24,
+        "headings": 122,
+        "hyperlinks": 5
+      },
+      "markdown": {
+        "images": 13,
+        "tables": 24,
+        "headings": 122,
+        "external_links": 10,
+        "draft_links": 0,
+        "characters": 178577
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-5-eshchyo-raz-pro-porty-a-takzhe-gavani",
+      "source_path": "docx_sources/4.5. Ещё раз про порты (а также гавани).docx",
+      "markdown_path": "content/markdown/4-5-eshchyo-raz-pro-porty-a-takzhe-gavani.md",
+      "source": {
+        "media": 1,
+        "tables": 1,
+        "headings": 613,
+        "hyperlinks": 1
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 1,
+        "headings": 612,
+        "external_links": 4,
+        "draft_links": 0,
+        "characters": 157843
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-5-5-zadannye-konflikty",
+      "source_path": "docx_sources/4.5.5. Заданные конфликты.docx",
+      "markdown_path": "content/markdown/4-5-5-zadannye-konflikty.md",
+      "source": {
+        "media": 2,
+        "tables": 0,
+        "headings": 17,
+        "hyperlinks": 1
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 0,
+        "headings": 18,
+        "external_links": 2,
+        "draft_links": 0,
+        "characters": 19955
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-6-1-tsennye-podarki",
+      "source_path": "docx_sources/4.6.1. Ценные подарки.docx",
+      "markdown_path": "content/markdown/4-6-1-tsennye-podarki.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 2,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 3,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 11878
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-6-2-prokhodnye-obyvateli",
+      "source_path": "docx_sources/4.6.2 Проходные обыватели.docx",
+      "markdown_path": "content/markdown/4-6-2-prokhodnye-obyvateli.md",
+      "source": {
+        "media": 52,
+        "tables": 0,
+        "headings": 52,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 52,
+        "tables": 0,
+        "headings": 53,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 21149
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-6-3-zakaznye-gruzoperevozki",
+      "source_path": "docx_sources/4.6.3. Заказные грузоперевозки.docx",
+      "markdown_path": "content/markdown/4-6-3-zakaznye-gruzoperevozki.md",
+      "source": {
+        "media": 1,
+        "tables": 2,
+        "headings": 86,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 2,
+        "headings": 87,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 50310
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-4-6-4-passazhirskie-perevozki-passazhiry-konstruktor",
+      "source_path": "docx_sources/4.6.4. Пассажирские перевозки + пассажиры + конструктор.docx",
+      "markdown_path": "content/markdown/4-6-4-passazhirskie-perevozki-passazhiry-konstruktor.md",
+      "source": {
+        "media": 1,
+        "tables": 6,
+        "headings": 63,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 6,
+        "headings": 62,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 41620
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-5-11-o-proizvodnykh-materialakh",
+      "source_path": "docx_sources/5.11. О производных материалах.docx",
+      "markdown_path": "content/markdown/5-11-o-proizvodnykh-materialakh.md",
+      "source": {
+        "media": 9,
+        "tables": 0,
+        "headings": 13,
+        "hyperlinks": 16
+      },
+      "markdown": {
+        "images": 9,
+        "tables": 0,
+        "headings": 14,
+        "external_links": 13,
+        "draft_links": 0,
+        "characters": 10239
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-5-12-vneshnie-ssylki",
+      "source_path": "docx_sources/5.12. Внешние ссылки.docx",
+      "markdown_path": "content/markdown/5-12-vneshnie-ssylki.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 6,
+        "hyperlinks": 45
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 7,
+        "external_links": 55,
+        "draft_links": 0,
+        "characters": 8831
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-5-13-collision-engine-srd",
+      "source_path": "docx_sources/5.13 Collision Engine SRD.docx",
+      "markdown_path": "content/markdown/5-13-collision-engine-srd.md",
+      "source": {
+        "media": 2,
+        "tables": 4,
+        "headings": 26,
+        "hyperlinks": 2
+      },
+      "markdown": {
+        "images": 2,
+        "tables": 4,
+        "headings": 27,
+        "external_links": 2,
+        "draft_links": 0,
+        "characters": 17887
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-5-2-kalendar-blagoslovennogo-priliva-blank",
+      "source_path": "docx_sources/5.2. Календарь благословенного прилива, бланк.docx",
+      "markdown_path": "content/markdown/5-2-kalendar-blagoslovennogo-priliva-blank.md",
+      "source": {
+        "media": 1,
+        "tables": 0,
+        "headings": 56,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 1,
+        "tables": 0,
+        "headings": 57,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 22876
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-zadannye-konflikty",
+      "source_path": "docx_sources/Врезки/Заданные конфликты.docx",
+      "markdown_path": "content/markdown/vrezki-zadannye-konflikty.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 16,
+        "hyperlinks": 1
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 17,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 14726
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-primer-dlya-zhizn-drugikh",
+      "source_path": "docx_sources/Врезки/Пример для _Жизнь других_.docx",
+      "markdown_path": "content/markdown/vrezki-primer-dlya-zhizn-drugikh.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 1,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 2,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 1919
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-pro-dekopank",
+      "source_path": "docx_sources/Врезки/Про декопанк.docx",
+      "markdown_path": "content/markdown/vrezki-pro-dekopank.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 3,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 4,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 4956
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-pro-interbellum",
+      "source_path": "docx_sources/Врезки/Про интербеллум.docx",
+      "markdown_path": "content/markdown/vrezki-pro-interbellum.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 1,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 2,
+        "external_links": 0,
+        "draft_links": 0,
+        "characters": 4487
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-pro-kulturu-litsedeystva",
+      "source_path": "docx_sources/Врезки/Про культуру лицедейства.docx",
+      "markdown_path": "content/markdown/vrezki-pro-kulturu-litsedeystva.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 1,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 2,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 3406
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-pro-mumi-eskapizm",
+      "source_path": "docx_sources/Врезки/Про муми-эскапизм.docx",
+      "markdown_path": "content/markdown/vrezki-pro-mumi-eskapizm.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 1,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 2,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 5520
+      },
+      "flags": []
+    },
+    {
+      "document_id": "ouw25-vrezki-pro-nuarnye-knizhki",
+      "source_path": "docx_sources/Врезки/Про нуарные книжки.docx",
+      "markdown_path": "content/markdown/vrezki-pro-nuarnye-knizhki.md",
+      "source": {
+        "media": 0,
+        "tables": 0,
+        "headings": 3,
+        "hyperlinks": 0
+      },
+      "markdown": {
+        "images": 0,
+        "tables": 0,
+        "headings": 4,
+        "external_links": 1,
+        "draft_links": 0,
+        "characters": 5655
+      },
+      "flags": []
+    }
+  ]
+}
