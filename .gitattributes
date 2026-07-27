@@ -1,0 +1,185 @@
+# Укрытое море — Git атрибуты для корректной обработки файлов
+
+# ============================================================================
+# ТЕКСТОВЫЕ ФАЙЛЫ
+# ============================================================================
+
+# Markdown
+*.md text eol=lf
+*.markdown text eol=lf
+
+# JSON (важны для индексов!)
+*.json text eol=lf
+*.jsonl text eol=lf
+
+# Python
+*.py text eol=lf
+*.pyx text eol=lf
+*.pyc binary
+*.pyo binary
+
+# Текстовые форматы
+*.txt text eol=lf
+*.csv text eol=lf
+*.tsv text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+
+# Shell скрипты
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Documentation
+*.rst text eol=lf
+*.adoc text eol=lf
+
+# ============================================================================
+# ДВОИЧНЫЕ ФАЙЛЫ
+# ============================================================================
+
+# Изображения (ассеты проекта)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.svg text eol=lf
+
+# Архивы
+*.zip binary
+*.tar binary
+*.tar.gz binary
+*.rar binary
+*.7z binary
+*.bz2 binary
+
+# Office документы
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.doc binary
+*.xls binary
+*.ppt binary
+
+# PDF
+*.pdf binary
+
+# Видео и аудио
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.mkv binary
+*.mp3 binary
+*.wav binary
+*.flac binary
+
+# Скомпилированный код
+*.o binary
+*.so binary
+*.dll binary
+*.exe binary
+*.app binary
+
+# ============================================================================
+# СПЕЦИФИЧНЫЕ ДЛЯ ПРОЕКТА
+# ============================================================================
+
+# FAISS индексы (двоичные, большие)
+*.faiss binary
+
+# NumPy файлы
+*.npy binary
+*.npz binary
+
+# Pickle файлы
+*.pkl binary
+*.pickle binary
+
+# PyTorch модели
+*.pt binary
+*.pth binary
+*.bin binary
+*.safetensors binary
+
+# ============================================================================
+# АВТОРСКИЕ ФАЙЛЫ
+# ============================================================================
+
+# Явно отмечаем лицензию как текст
+LICENSE text eol=lf
+LICENSE.* text eol=lf
+LICENSES/* text eol=lf
+COPYING text eol=lf
+
+# Проектные мета-файлы
+README.md text eol=lf
+PLAN.md text eol=lf
+CHANGELOG.md text eol=lf
+CONTRIBUTING.md text eol=lf
+RELEASE_NOTES.md text eol=lf
+VERSION text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# ============================================================================
+# ОБРАБОТКА ЛИНИЙ КОНЦА ФАЙЛА
+# ============================================================================
+
+# Нормализовать все текстовые файлы на Unix (LF) для консистентности
+* text=auto
+
+# Windows специфичные исключения (CRLF для Windows скриптов)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# ============================================================================
+# РАЗРАБОТЧЕСКИЕ ФАЙЛЫ
+# ============================================================================
+
+# Git конфиги
+.gitconfig text eol=lf
+
+# EditorConfig (для унификации стиля)
+.editorconfig text eol=lf
+
+# Конфиги редакторов
+.prettierrc text eol=lf
+.eslintrc text eol=lf
+
+# Docker
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf
+.dockerignore text eol=lf
+
+# GitHub
+.github/** text eol=lf
+
+# ============================================================================
+# GIT LFS (БОЛЬШИЕ ФАЙЛЫ) — ОПЦИОНАЛЬНО
+# ============================================================================
+
+# Если позволяет размер репозитория, можно включить LFS для больших файлов:
+
+# Большие изображения (если много)
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+
+# Большие модели
+# *.bin filter=lfs diff=lfs merge=lfs -text
+# *.pt filter=lfs diff=lfs merge=lfs -text
+
+# FAISS индексы (если очень большие)
+# *.faiss filter=lfs diff=lfs merge=lfs -text
+
+# ============================================================================
+# КОНЕЦ ФАЙЛА
+# ============================================================================
+
+# Убедитесь что все текстовые файлы заканчиваются перевод строки
+* text=auto eol=lf

@@ -1,0 +1,472 @@
+# Укрытое море — корпус для ML
+# .gitignore для исключения временных и системных файлов
+
+# ============================================================================
+# СИСТЕМНЫЕ ФАЙЛЫ
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ============================================================================
+# RAG И ML
+# ============================================================================
+
+# FAISS индексы (могут быть большими)
+rag_index.faiss
+*.faiss
+vector_db.faiss
+embeddings.npy
+embeddings_*.npy
+
+# Кэшированные модели эмбеддингов
+sentence_transformers/
+transformers/
+huggingface/
+.cache/
+
+# Временные ML файлы
+*.pkl
+*.pickle
+model_cache/
+pretrained_models/
+
+# Ollama кэш
+ollama_cache/
+models/
+
+# Временные чанки и обработанные файлы
+temp_chunks/
+processed_*.jsonl
+test_output/
+
+# ============================================================================
+# РАЗРАБОТКА И ТЕСТИРОВАНИЕ
+# ============================================================================
+
+# Временные файлы редакторов
+*.bak
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+.#*
+
+# Логи
+logs/
+*.log
+
+# Временные каталоги
+tmp/
+temp/
+.tmp/
+.cache/
+
+# IDE специфичные файлы
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.eclipse/
+.classpath
+.project
+
+# ============================================================================
+# БОЛЬШИЕ ФАЙЛЫ И БИНАРНЫЕ ДАННЫЕ
+# ============================================================================
+
+# Изображения (ассеты уже в репозитории, но исключаем дубликаты)
+# content/assets/ — ВКЛЮЧАЕМ в git, но исключаем дубликаты
+**/assets_backup/
+**/assets_old/
+*.psd
+*.xcf
+
+# Видео и аудио
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+*.mp3
+*.wav
+*.flac
+
+# Архивы
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.bz2
+*.xz
+
+# Большие модели (если скачиваются локально)
+*.bin
+*.safetensors
+*.pt
+*.pth
+models/
+checkpoints/
+weights/
+
+# ============================================================================
+# БАЗА ДАННЫХ И ИНДЕКСЫ
+# ============================================================================
+
+# SQL базы
+*.db
+*.sqlite
+*.sqlite3
+*.dbf
+
+# Индексы Elasticsearch
+.es/
+es_data/
+
+# Qdrant, Weaviate, Milvus данные
+qdrant_storage/
+weaviate_data/
+milvus_data/
+vector_db/
+
+# Кэши БД
+*.cache
+cache/
+
+# ============================================================================
+# КОНФИДЕНЦИАЛЬНАЯ ИНФОРМАЦИЯ
+# ============================================================================
+
+# API ключи и секреты
+.env
+.env.local
+.env.*.local
+*.secret
+secrets/
+credentials/
+api_keys/
+
+# OAuth токены
+token.json
+tokens/
+
+# Приватные данные
+private/
+sensitive/
+
+# ============================================================================
+# BUILD И RELEASE
+# ============================================================================
+
+# Node modules (если есть JS компоненты)
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Go
+vendor/
+go.sum
+
+# Rust
+target/
+Cargo.lock
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# ============================================================================
+# СПЕЦИФИЧНЫЕ ДЛЯ ПРОЕКТА
+# ============================================================================
+
+# Исключить дубликаты корпуса
+content/markdown_backup/
+content/imported_backup/
+content/assets_backup/
+
+# Черновики и WIP
+drafts/
+work_in_progress/
+experimental/
+sandbox/
+
+# Локальные конфигурации
+local_config.json
+*.local.json
+
+# Результаты тестирования
+test_results/
+test_output/
+bench_results/
+
+# Документация, сгенерированная автоматически (если есть)
+generated_docs/
+api_docs/
+
+# ============================================================================
+# DOCX ИСХОДНИКИ (ОПЦИОНАЛЬНО)
+# ============================================================================
+
+# Если хотите исключить исходные DOCX (занимают много места):
+# ВАЖНО: Раскомментируйте ТОЛЬКО если уверены что нужно
+# docx_sources/*.docx
+# !docx_sources/README.md
+
+# Временные файлы Office
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# ============================================================================
+# GIT
+# ============================================================================
+
+# Git временные файлы
+.git/
+.gitignore
+.gitattributes
+
+# Merge конфликты
+*.orig
+*.rej
+
+# ============================================================================
+# CI/CD
+# ============================================================================
+
+# GitHub Actions
+.github/workflows/*.log
+.github/cache/
+
+# GitLab CI
+.gitlab-ci.yml.local
+.gitlab/
+
+# Travis CI
+.travis.yml.local
+
+# Jenkins
+Jenkinsfile.local
+
+# ============================================================================
+# ДОКУМЕНТАЦИЯ И КОММЕНТАРИИ
+# ============================================================================
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dpth
+*.md5
+*.auxlock
+
+# Markdown preview
+*.md.html
+
+# ============================================================================
+# DEVELOPMENT-ONLY ПРАВИЛА
+# ============================================================================
+
+# Правила для development конфига
+.gitignore.local
+
+# Персональные примечания
+NOTES.md
+TODO_PERSONAL.md
+my_experiments/
+
+# ============================================================================
+# FINALIZE - НИКОГДА НЕ ИСКЛЮЧАЙТЕ ЭТИ ФАЙЛЫ
+# ============================================================================
+
+# ВАЖНЫЕ ФАЙЛЫ - ВСЕГДА ВКЛЮЧАТЬ:
+# ✓ README.md
+# ✓ PLAN.md
+# ✓ CHANGELOG.md
+# ✓ VERSION
+# ✓ LICENSE* - файлы лицензии
+# ✓ content/markdown/ - основной корпус
+# ✓ content/indexes/ - JSONL индексы
+# ✓ content/chunks/ - чанки для RAG
+# ✓ content/assets/ - изображения
+# ✓ scripts/ - скрипты обработки
+# ✓ docs/ - документация
+# ✓ examples/ - примеры кода
+
+# Явно разрешаем критические файлы (если потребуется):
+!.gitignore
+!.gitattributes
+!README.md
+!PLAN.md
+!CHANGELOG.md
+!VERSION
+!LICENSE*
+!LICENSES/
+!content/markdown/
+!content/indexes/
+!content/chunks/
+!content/assets/
+!scripts/
+!docs/
+!examples/
