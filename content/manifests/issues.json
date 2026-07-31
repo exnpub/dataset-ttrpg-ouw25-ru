@@ -2,66 +2,234 @@
   "schema_version": 1,
   "issues": [
     {
+      "document_id": "ouw25-0-vvodnaya-chast",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-1-kratkie-razyasneniya",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-1-minimalnyy-kontekst",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-2-vash-geroy-ekipazh-i-sudno",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-3-spornye-sluchai",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-3-1-dramaticheskiy-razmen",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-4-po-moryam-po-volnam",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-5-portovaya-sueta",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-2-6-prikladnaya-ekonomika",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-1-narody-morya",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-2-globalnaya-geografiya",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-3-vliyatelnye-koalitsii",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-4-personalii-i-kharakternye-tipy",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-5-istoricheskaya-perspektiva",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-6-klyuchevye-porty",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-3-7-putevye-peripetii",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-0-vstupitelnaya-chast",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-1-pro-ideologiyu-dizayna",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-2-v-nachale-kampanii",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-2-1-4-shablon-protokola-nulevoy-vstrechi",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
       "document_id": "ouw25-4-2-1-4-shablon-protokola-nulevoy-vstrechi",
       "category": "template_fields",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Пустые строки бланка свёрнуты в маркеры «Поле для заполнения»; сверить форму с DOCX."
+    },
+    {
+      "document_id": "ouw25-4-3-struktury-i-tsikly",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-4-prostranstva-puteshestviy",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-5-eshchyo-raz-pro-porty-a-takzhe-gavani",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
+    },
+    {
+      "document_id": "ouw25-4-5-5-zadannye-konflikty",
+      "category": "image_description",
+      "severity": "review",
+      "status": "open",
+      "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-4-6-1-tsennye-podarki",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-4-6-2-prokhodnye-obyvateli",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-4-6-3-zakaznye-gruzoperevozki",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-4-6-4-passazhirskie-perevozki-passazhiry-konstruktor",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-5-11-o-proizvodnykh-materialakh",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-5-12-vneshnie-ssylki",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-5-13-collision-engine-srd",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     },
     {
       "document_id": "ouw25-5-2-kalendar-blagoslovennogo-priliva-blank",
       "category": "image_description",
       "severity": "review",
-      "status": "closed",
+      "status": "open",
       "message": "Добавить содержательные описания к изображениям перед визуальным поиском."
     }
   ]

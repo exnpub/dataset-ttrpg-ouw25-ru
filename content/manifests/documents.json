@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-26",
+  "generated_at": "2026-07-31",
   "source_directory": "docx_sources",
   "pandoc": "pandoc 3.10.1",
   "documents": [
