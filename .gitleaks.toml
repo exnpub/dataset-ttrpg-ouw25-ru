@@ -1,0 +1,10 @@
+[allowlist]
+files = [
+    "(?i).env",
+    "(?i)requirements.txt",
+    "(?i)Makefile",
+    "(?i)setup_and_test.sh"
+]
+paths = [
+    "content/manifests/issues.json"
+]

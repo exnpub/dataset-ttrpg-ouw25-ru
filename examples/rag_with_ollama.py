@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import List, Dict
 import requests
 import time
+import subprocess
 
 # Импортируем основной класс RAG
 from examples.rag_quick_demo import UkrytoeMoreRAG, load_dependencies
@@ -62,9 +63,29 @@ class OllamaRAG(UkrytoeMoreRAG):
         try:
             response = requests.get(f"{self.ollama_url}/api/tags", timeout=5)
             if response.status_code == 200:
+                print(f"✓ Ollama доступен")
+        except Exception:
+            print("🚀 Сервер Ollama не запущен. Попытка запуска...")
+            try:
+                subprocess.Popen(["open", "-a", "Ollama"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                for i in range(30):
+                    try:
+                        requests.get(f"{self.ollama_url}/api/tags", timeout=2)
+                        print("✅ Сервер Ollama успешно запущен!")
+                        time.sleep(2)
+                        break
+                    except:
+                        time.sleep(1)
+            except Exception as e:
+                print(f"❌ Ошибка при попытке запуска Ollama: {e}")
+                sys.exit(1)
+
+        # Повторная проверка после попытки запуска
+        try:
+            response = requests.get(f"{self.ollama_url}/api/tags", timeout=5)
+            if response.status_code == 200:
                 models = response.json().get("models", [])
                 model_names = [m["name"] for m in models]
-                print(f"✓ Ollama доступен")
                 print(f"  Доступные модели: {', '.join(model_names[:3])}")
                 
                 if not any(self.llm_model in m for m in model_names):
@@ -72,14 +93,11 @@ class OllamaRAG(UkrytoeMoreRAG):
                     print(f"  Установите её командой:")
                     print(f"    ollama pull {self.llm_model}")
                     sys.exit(1)
-        except requests.exceptions.ConnectionError:
-            print("❌ Ошибка: Ollama недоступен!")
-            print("\nУбедитесь, что Ollama запущена:")
-            print("  ollama serve")
-            print("\nИли установите Ollama: https://ollama.ai")
-            sys.exit(1)
+            else:
+                print(f"❌ Ошибка: Ollama вернул статус {response.status_code}")
+                sys.exit(1)
         except Exception as e:
-            print(f"❌ Ошибка при подключении к Ollama: {e}")
+            print(f"❌ Ошибка: Ollama по-прежнему недоступен: {e}")
             sys.exit(1)
     
     def generate_with_ollama(self, prompt: str) -> str:

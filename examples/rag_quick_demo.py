@@ -74,10 +74,14 @@ class UkrytoeMoreRAG:
         
         # 3. Загрузить или построить индекс
         print("[3/3] 🔍 Загружаю FAISS-индекс...")
-        try:
-            self.index = faiss.read_index(self.index_path)
-            print(f"      ✓ Индекс загружен из {self.index_path}")
-        except FileNotFoundError:
+        if Path(self.index_path).exists():
+            try:
+                self.index = faiss.read_index(self.index_path)
+                print(f"      ✓ Индекс загружен из {self.index_path}")
+            except Exception as e:
+                print(f"      ⚠️  Ошибка загрузки индекса: {e}. Строю новый...")
+                self._build_index(faiss)
+        else:
             print(f"      ℹ️  Индекс не найден. Строю новый...")
             self._build_index(faiss)
     

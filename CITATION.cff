@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Укрытое море: Корпус настольной ролевой игры для ML и RAG"
+message: "Если вы используете этот корпус, датасет или его фрагменты в ваших исследованиях, обучении ИИ-моделей или продуктах, пожалуйста, сошлитесь на него с помощью этих метаданных."
+type: dataset
+authors:
+  - name: "Ex Nihilum Publishing"
+    website: "https://exnihilum.info"
+repository-code: "https://github.com/exnihilum/ouw25_lm"
+url: "https://doi.org/10.5281/zenodo.21694650"
+doi: "10.5281/zenodo.21694650"
+license: CC0-1.0
+version: "1.1.0"
+date-released: "2026-07-28"
+keywords:
+  - ttrpg
+  - rpg
+  - worldbuilding
+  - russian-nlp
+  - rag-dataset
+  - rulebook
+  - fantasy
+  - public-domain

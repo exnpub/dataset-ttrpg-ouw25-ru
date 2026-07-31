@@ -1,60 +1,70 @@
 # 🌊 Укрытое море — корпус для ML
 
 Полностью обработанный, проверенный и готовый к использованию текстовый корпус
-релизных черновиков настольной ролевой игры [**«Укрытое море: Благословенный прилв»**](https://ukrytoemore.ru/) от [Ex Nihilum Publishing](https://exnihilum.info).
+релизных черновиков настольной ролевой игры [**«Укрытое море: Благословенный прилив»**](https://ukrytoemore.ru/) от [Ex Nihilum Publishing](https://exnihilum.info).
 
 - 📚 **39 документов** в проверенном Markdown
 - 🔍 **1378 семантических фрагментов** для RAG и эмбеддингов
 - 🖼️ **132 иллюстрации** с метаданными
 - 📝 **Public Domain** лицензия — свободное использование в ML-проектах
 - ✅ **Полностью валидирован** — структуры, ссылки, изображения без потерь
+- 📦 **Hugging Face Dataset**: [`exnihilum/ttrpg-ouw25-ru`](https://huggingface.co/datasets/exnihilum/ttrpg-ouw25-ru)
+- 📊 **Kaggle Dataset**: [`exnihilum/ouw25_ru`](https://www.kaggle.com/datasets/exnihilum/ouw25_ru)
+- 🏛️ **Zenodo DOI**: [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.21694650.svg)](https://doi.org/10.5281/zenodo.21694650)
 
 ---
 
 ## Быстрый старт
 
-### Использование готовых индексов
-
-Индексы уже вычислены и готовы к использованию:
-
-```bash
-# Посмотреть статистику
-wc -l content/indexes/documents.jsonl content/chunks/chunks.jsonl
-
-# Загрузить в Python
-python3 -c "
-import json
-with open('content/chunks/chunks.jsonl') as f:
-    chunk = json.loads(f.readline())
-    print(json.dumps(chunk, indent=2, ensure_ascii=False)[:500])
-"
-```
-
-### Собрать индексы с нуля
-
-Если вы редактировали Markdown:
-
-```bash
-python3 scripts/validate_corpus.py  # Проверить структуру
-python3 scripts/build_indexes.py     # Пересчитать JSONL
-python3 scripts/audit_conversion.py  # QA-аудит
-```
-
-### Первый RAG-запрос
+### Использование Hugging Face / Kaggle Datasets
 
 ```python
-import json
+from datasets import load_dataset
 
-# Загрузить чанки
-chunks = [json.loads(line) for line in open("content/chunks/chunks.jsonl")]
+# Загрузить 1378 чанков для RAG
+ds = load_dataset("exnihilum/ttrpg-ouw25-ru", "chunks")
+print(ds["train"][0]["text"])
 
-# Поиск
-query = "Благословенный прилив"
-results = [c for c in chunks if query.lower() in c["text"].lower()][:3]
+# Загрузить 39 полных документов
+docs = load_dataset("exnihilum/ttrpg-ouw25-ru", "documents")
 
-for r in results:
-    print(f"[{r['chunk_id']}] {' > '.join(r['heading_path'])}")
-    print(r['text'][:300] + "...\n")
+# Загрузить векторные эмбеддинги (384 измерения)
+embeddings = load_dataset("exnihilum/ttrpg-ouw25-ru", "embeddings")
+```
+
+### Использование готового FAISS-индекса (Моментальный RAG)
+
+```python
+import faiss
+import numpy as np
+from huggingface_hub import hf_hub_download
+from sentence_transformers import SentenceTransformer
+
+# 1. Скачать готовый векторный индекс с Hugging Face
+index_path = hf_hub_download(repo_id="exnihilum/ttrpg-ouw25-ru", filename="rag_index.faiss", repo_type="dataset")
+index = faiss.read_index(index_path)
+
+# 2. Модель для вектора вопроса
+model = SentenceTransformer('intfloat/multilingual-e5-small')
+
+# 3. Мгновенный поиск за 1 мс
+query = "Как работает Collision Engine?"
+query_vec = model.encode([query])[0].astype("float32")
+distances, indices = index.search(np.array([query_vec]), k=3)
+```
+
+### Собрать индексы и выгрузить в облака
+
+```bash
+# E2E тест RAG-системы с автоматическим управлением Ollama
+./setup_and_test.sh
+
+# Собрать Parquet и FAISS артефакты
+python3 scripts/prepare_for_huggingface.py
+
+# Опубликовать на Hugging Face и Kaggle
+python3 scripts/upload_to_huggingface.py
+python3 scripts/upload_to_kaggle.py
 ```
 
 ---
@@ -76,108 +86,27 @@ for r in results:
 │  ├─ 📁 manifests/            # Реестры и открытые вопросы
 │  └─ 📄 README.md             # О слоях данных
 ├─ 📁 scripts/
+│  ├─ prepare_for_huggingface.py # Конвертер и экспорт векторов
+│  ├─ upload_to_huggingface.py  # Публикация на Hugging Face Hub
+│  ├─ upload_to_kaggle.py       # Публикация на Kaggle Datasets
+│  ├─ test_rag_ollama.py        # Автоматизированный E2E-тест RAG
 │  ├─ build_corpus.py          # DOCX → Markdown конвертация
 │  ├─ build_indexes.py         # Генерация JSONL
-│  ├─ validate_corpus.py       # Проверка целостности
-│  ├─ audit_conversion.py      # QA-аудит
-│  └─ index_images.py          # Индексация изображений
+│  └─ validate_corpus.py       # Проверка целостности
 ├─ 📁 docs/
+│  ├─ HUGGINGFACE_SETUP.md     # Инструкция по публикации на HF
+│  ├─ RAG_TEST_REPORT.md       # Отчёт о прохождении E2E-тестов
 │  ├─ AI_CONSTRAINTS.md        # Ограничения для ИИ
-│  ├─ ML_USAGE.md              # Примеры использования в ML
-│  └─ CONTRIBUTING.md          # Правила редактирования
+│  └─ ML_USAGE.md              # Примеры использования в ML
 ├─ 📁 LICENSES/
 │  └─ TEXTS-PUBLIC-DOMAIN.md   # Декларация лицензии
+├─ 📄 CITATION.cff             # Файл цитирования для ИИ-моделей
+├─ 📄 .env.example             # Шаблон конфигурации токенов
+├─ 📄 setup_and_test.sh        # Скрипт E2E развёртывания и тестов
+├─ 📄 rag_index.faiss          # Бинарный FAISS векторный индекс (2.1 MB)
 ├─ 📄 PLAN.md                  # Исходный план проекта
 ├─ 📄 CHANGELOG.md             # История выпусков
 └─ 📄 README.md                # Этот файл
-```
-
----
-
-## Использование корпуса
-
-### 📖 Для RAG-ассистентов
-
-```python
-from typing import Any
-
-class OkhotnoeMoreRAG:
-    def __init__(self):
-        self.chunks = [
-            json.loads(line) 
-            for line in open("content/chunks/chunks.jsonl")
-        ]
-    
-    def search(self, query: str) -> list[dict[str, Any]]:
-        """Найти релевантные чанки."""
-        results = []
-        for chunk in self.chunks:
-            if query.lower() in chunk["text"].lower():
-                results.append(chunk)
-        return results[:5]
-    
-    def format_for_llm(self, chunks: list) -> str:
-        """Форматировать контекст для LLM."""
-        parts = []
-        for chunk in chunks:
-            path = " → ".join(chunk["heading_path"])
-            parts.append(f"**{path}**\n\n{chunk['text']}")
-        return "\n\n---\n\n".join(parts)
-
-# Использование
-rag = OkhotnoeMoreRAG()
-results = rag.search("Как рассчитать риск?")
-context = rag.format_for_llm(results)
-# → отправить в LLM вместе с системным промптом из docs/AI_CONSTRAINTS.md
-```
-
-### 🤖 Для дообучения моделей
-
-```bash
-# Подготовить датасет (текст)
-python3 scripts/build_indexes.py
-
-# Экспортировать в HuggingFace format
-python3 -c "
-import json
-docs = [json.loads(line) for line in open('content/indexes/documents.jsonl')]
-for doc in docs:
-    print(json.dumps({'text': doc['text'], 'metadata': {
-        'document_id': doc['document_id'],
-        'type': doc['document_type']
-    }}, ensure_ascii=False))
-" > finetune_dataset.jsonl
-```
-
-### 🔍 Для полнотекстового поиска
-
-```sql
--- Примерный запрос для Elasticsearch/OpenSearch
-POST /ukrytoe-more-chunks/_search
-{
-  "query": {
-    "multi_match": {
-      "query": "Благословенный прилив",
-      "fields": ["text", "heading_path"]
-    }
-  },
-  "size": 10
-}
-```
-
-### 🖼️ Для визуального поиска (multimodal)
-
-```python
-# Загрузить метаданные изображений
-images = [
-    json.loads(line) 
-    for line in open("content/indexes/images.jsonl")
-]
-
-# Пример: найти все изображения в конкретном документе
-doc_images = [img for img in images if img["document_id"] == "ouw25-3-1-narody-morya"]
-for img in doc_images:
-    print(f"![{img['alt_text']}]({img['path']})")
 ```
 
 ---
@@ -187,123 +116,37 @@ for img in doc_images:
 | Файл | Назначение |
 |------|-----------|
 | **`CHANGELOG.md`** | История всех версий и выпусков |
+| **`docs/HUGGINGFACE_SETUP.md`** | Гайд по работе и публикации на Hugging Face |
+| **`docs/RAG_TEST_REPORT.md`** | Отчёт о прохождении E2E-тестов RAG + Ollama |
 | **`docs/AI_CONSTRAINTS.md`** | Ограничения и ожидания для ИИ-моделей |
 | **`docs/ML_USAGE.md`** | Подробные примеры использования в ML |
-| **`docs/CONTRIBUTING.md`** | Правила редактирования и внесения изменений |
 | **`LICENSES/TEXTS-PUBLIC-DOMAIN.md`** | Полная декларация лицензии |
-| **`content/README.md`** | О структуре слоёв данных |
-| **`PLAN.md`** | Исходный план проекта (история) |
+| **`CITATION.cff`** | Метаданные цитирования для научных исследований и ИИ-лабораторий |
 
 ---
 
-## Качество и валидация
+## Лицензирование и цитирование
 
-### ✅ Что проверено
+### ⚖️ Лицензия
 
-- Все 39 документов конвертированы без ошибок
-- Структура заголовков корректна (H1 → H2–H4)
-- Все внутренние и внешние ссылки рабочие
-- 132 изображения извлечены и переиндексированы
-- Таблицы и сноски сохранены или явно отмечены
-- Все документы имеют валидные YAML-метаданные
-- JSONL-индексы детерминированны (одинаковые при пересборке)
+- **Текст**: **Public Domain (CC0)** — полная свобода использования для обучения ИИ, RAG и коммерции.
+- **Изображения**: **авторское право** — требуется согласие для переиспользования.
 
-### 📊 Статистика
+### 📌 Цитирование (Citation)
 
-- **Исходники**: 39 DOCX (~61 МБ)
-- **Markdown текст**: ~18 000 строк (~1.2 МБ)
-- **Документный индекс**: 39 записей (~2.5 МБ JSON)
-- **Чанк-индекс**: 1378 фрагментов (~3.2 МБ JSON)
-- **Изображения**: 132 файла (~450 МБ PNG/JPEG)
-- **Общий размер**: ~470 МБ с ассетами
+При использовании датасета в научных статьях, ИИ-моделях или публичных продуктах ссылайтесь на нас:
 
----
-
-## Лицензирование
-
-### ✅ Что можно делать
-
-- Использовать в коммерческих и некоммерческих проектах
-- Дообучивать модели на текстовом корпусе
-- Создавать RAG-ассистентов и чатботов
-- Генерировать новые материалы в сеттинге
-- Распространять производные работы
-
-### ⚠️ Ограничения
-
-- Текст: **Public Domain (CC0)** — полная свобода
-- Изображения: **авторское право** — требуется [отдельное согласие](mailto:mb@exnihilum.info) для переиспользования
-- При публикации — указать источник:
-  ```
-  Корпус основан на настольной ролевой игре «Укрытое море» (2025),
-  выпущено под Public Domain.
-  ```
-
-Полный текст — см. `LICENSES/TEXTS-PUBLIC-DOMAIN.md`
-
----
-
-## Разработка и внесение вклада
-
-### Редактирование корпуса
-
-Если вы хотите исправить опечатку, добавить описание к изображению или уточнить содержание:
-
-1. Отредактируйте файл в `content/markdown/`
-2. Запустите валидацию: `python3 scripts/validate_corpus.py`
-3. Пересчитайте индексы: `python3 scripts/build_indexes.py`
-4. Коммитьте: `git commit -m "docs: описание изменений"`
-
-Подробнее — в `docs/CONTRIBUTING.md`
-
-### Выявление ошибок
-
-Если вы нашли опечатку, неработающую ссылку или другую проблему:
-
-1. Откройте **Issue** с описанием
-2. Укажите документ (`document_id`) и строку
-3. Предложите исправление
-
-### Расширение корпуса
-
-Для добавления новых материалов нужно согласие правообладателя.
-
----
-
-## Примеры проектов
-
-Этот корпус готов для использования в:
-
-- 🤖 **RAG-ассистентов**: поиск правил, помощь ведущему
-- 📚 **Дообучения LLM**: специализированные модели для игровых миров
-- 🔍 **Семантического поиска**: эмбеддинги и векторные индексы
-- 📊 **Анализа данных**: статистика используемых терминов, правила, жанр
-- 🎮 **Генераторов контента**: создание приключений и NPC
-- 🗂️ **Каталогизации материалов**: интеграция с wiki/базами знаний
-
----
-
-## Поддержка и вопросы
-
-- 📖 **Документация**: см. папку `docs/`
-- 🐛 **Ошибки**: откройте Issue
-- 💬 **Обсуждение**: см. Discussions (если включены)
-- 📧 **Контакт**: через репозиторий
-
----
-
-## Версия
-
-```
-Укрытое море — корпус для ML v1.0.0 (2026-07-27)
-Все 39 документов проверены и готовы к использованию
+```bibtex
+@dataset{ukrytoe_more_corpus_2026,
+  author = {Ex Nihilum Publishing},
+  title = {Укрытое море: Корпус настольной ролевой игры для ML и RAG},
+  year = {2026},
+  publisher = {Zenodo / Hugging Face / Kaggle},
+  version = {1.1.0},
+  doi = {10.5281/zenodo.21694650},
+  url = {https://doi.org/10.5281/zenodo.21694650}
+}
 ```
 
-[📖 Полная история изменений](CHANGELOG.md) | [📄 Исходный план](PLAN.md)
-
 ---
-
-**Спасибо за использование корпуса!** ⚓
-
-Помните: Укрытое море — это мир абсурда, иронии и меланхолии.
-Ваши модели тоже должны это понимать. 🌊
+*Проект подготовлен Ex Nihilum Publishing (2026).*

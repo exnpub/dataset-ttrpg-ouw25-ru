@@ -1,0 +1,50 @@
+dataset_info:
+  - config_name: chunks
+    description: "Семантические фрагменты (400-1000 токенов) для RAG систем."
+    features:
+      - name: chunk_id
+        dtype: string
+      - name: document_id
+        dtype: string
+      - name: chunk_number
+        dtype: int64
+      - name: heading_path
+        sequence: string
+      - name: document_type
+        dtype: string
+      - name: language
+        dtype: string
+      - name: license
+        dtype: string
+      - name: text
+        dtype: string
+  - config_name: documents
+    description: "Полные тексты документов в формате Markdown."
+    features:
+      - name: document_id
+        dtype: string
+      - name: title
+        dtype: string
+      - name: document_type
+        dtype: string
+      - name: language
+        dtype: string
+      - name: license
+        dtype: string
+      - name: text
+        dtype: string
+  - config_name: images
+    description: "Метаданные изображений (alt-тексты, описания)."
+    features:
+      - name: image_id
+        dtype: string
+      - name: alt_text
+        dtype: string
+      - name: source_document
+        dtype: string
+      - name: caption
+        dtype: string
+      - name: license
+        dtype: string
+      - name: sha256
+        dtype: string

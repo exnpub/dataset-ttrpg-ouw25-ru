@@ -2,17 +2,17 @@
 # Установка: pip install -r examples/requirements_rag.txt
 
 # Основные пакеты для RAG
-numpy==1.24.3
-sentence-transformers==2.2.2
-faiss-cpu==1.7.4
+numpy>=1.26.0
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
 
 # Опционально: для использования с OpenAI
-openai==1.3.0  # для GPT-4/GPT-3.5
+openai>=1.3.0  # для GPT-4/GPT-3.5
 
 # Опционально: для веб-API
-fastapi==0.109.0
-uvicorn==0.27.0
-pydantic==2.5.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.5.0
 
 # Опционально: для работы с Ollama (локальные модели)
 # ollama - устанавливается отдельно с сайта ollama.ai
